@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.login{
+background-color: blue;
+color: white;
+border: none;
+width: 75%;
+padding: 5px;
+margin: 3%;
+}
+.container form input{
+padding: 5px;
+margin: 3%;
+width: 75%;
+}
+.container img{
+width: 70%;
+margin: 5%;
+}
