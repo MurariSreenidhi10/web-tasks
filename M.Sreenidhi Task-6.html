@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Sreenidhi task-6</title>
+    <style>
+     body{
+        background-image:linear-gradient(rgb(142,97,184),rgb(143, 95, 189),rgb(148, 108, 185),rgb(155, 110, 197),rgb(192,177,202),rgb(192,177,202),rgb(192,177,202))
+     }
+     .mits{
+        border: 3px solid rgb(228, 15, 15);
+        margin-right: 500px;
+        margin-top: 40px;
+        border-radius: 10px;
+        margin-left: 500px;
+        background-color:rgba(226, 226, 226, 0.921);
+     }
+     .head{
+      font-size:x-large;
+        text-align: center;
+        font-weight: bold;
+     }
+     img{
+        padding-left: 150px;
+     }
+     .container{
+        background-color:rgba(146, 140, 140, 0.864);
+        text-align: center;
+        font-size: larger;
+        font-family:monospace;
+        padding-top: 20px;
+     }
+     button{
+        size: 35px;
+        margin-left: 330px;
+     }
+    </style>
+</head>
+<body>
+    <div class="mits">
+        <img src="C:\Users\RAMESH\Desktop\mits1.png" alt="">
+        <pre class="head">Authenthetication Required</pre>
+        <div class="container">
+            Please Enter your username and password to continue...
+            <br>
+            <br>
+            <label for="name">Username:</label>
+            <input type="text" required>
+            <br>
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" required>
+            <br><br>
+            <button type="submit">Continue</button>
+            <br><br>
+        </div>
+    </div>
+    <br>
+    <center><a href="#">Grievance and Redressal Cell Website</a></center>
+    <br>
+    <div>
+        <a href="hello" style="margin-left: 300px;">Click here to MITS Electives</a>
+        <a href="hii" style="margin-left: 200px;">Click here to MITS MOOC's</a>
+        <a href="new" style="margin-left: 200px;">Click here to MITS GDLC</a>
+    </div><br><br>
+    <div>
+        <a href="good" style="margin-left: 450px;">Click here to Library Soul- Opac</a>
+        <a href="red" style="margin-left: 250px;">MITS MOODLE Login</a>
+    </div>
+    <br><br>
+    <center><a href="boy">Click here to MITSIMS(GEMS)Login</a></center>
+    <script>
+        // 1)Area of a triangle
+        var side1 = 5; 
+        var side2 = 6; 
+        var side3 = 7; 
+        var s = (side1 + side2 + side3)/2;
+        var area =  Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+        let text="Area of triangle is"
+        console.log(text)  
+        console.log(area);
+        // 2)Leap year in the Gregorian
+        function isLeapYear(year) {
+    if (year % 100 === 0 ? year % 400 === 0 : year % 4 === 0)
+        console.log("Input year:", year, "is a Leap Year");
+    else
+        console.log(
+            " Input year:",
+            year,
+            "is NOT a Leap Year"
+        );
+}
+let inputYear = 2020;
+isLeapYear(inputYear);
+inputYear = 2023;
+isLeapYear(inputYear);
+// 3)Sunday b/w 2014 and 2050
+function firstSunday () {
+  for (var year = 2014; year <= 2050; year++) {
+    var d = new Date(year, 0, 1);
+    if (d.getDay() === 0) {
+      console.log('The first day of ' + year + ' is a Sunday');
+    }
+  }
+}
+firstSunday();
+// 4)christmas
+today=new Date();
+var cmas=new Date(today.getFullYear(), 11, 25);
+if (today.getMonth()==11 && today.getDate()>25) 
+{
+cmas.setFullYear(cmas.getFullYear()+1); 
+}  
+var one_day=1000*60*60*24;
+console.log(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
+" days left until Christmas!");
+// 5)compare two objects
+let obj1 = {
+    name: "John",
+    age: 23,
+    degree: "CS"
+}
+let obj2 = {
+    age: 23,
+    degree: "CS"
+}
+function check(obj1, obj2) {
+    for (key in obj2) {
+        if (obj1[key] !== obj2[key]) {
+            return false;
+        }
+    }
+    return true
+}
+console.log(check(obj1, obj2))
+// 6)alphabetical order
+function alphabet_order(str)
+  {
+return str.split('').sort().join('');
+  }
+console.log(alphabet_order("webmaster"));
+
+// 7)conversion into uppercase
+function uppercase(str)
+{
+  var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+console.log(uppercase("the quick brown fox"));
+
+// 8)second greatest number
+
+function Second_Greatest_Lowest(arr_num)
+{
+  arr_num.sort(function(x,y)
+           {
+           return x-y;
+           });
+  var uniqa = [arr_num[0]];
+  var result = [];
+  for(var j=1; j < arr_num.length; j++)
+  {
+    if(arr_num[j-1] !== arr_num[j])
+    {
+      uniqa.push(arr_num[j]);
+    }
+  }
+    result.push(uniqa[1],uniqa[uniqa.length-2]);
+  return result.join(',');
+  }
+console.log(Second_Greatest_Lowest([1,2,3,4,5]));
+/*Area of triangle is
+task6.html:89 14.696938456699069
+task6.html:96  Input year: 2020 is a Leap Year
+task6.html:98  Input year: 2023 is NOT a Leap Year
+task6.html:113 The first day of 2017 is a Sunday
+task6.html:113 The first day of 2023 is a Sunday
+task6.html:113 The first day of 2034 is a Sunday
+task6.html:113 The first day of 2040 is a Sunday
+task6.html:113 The first day of 2045 is a Sunday
+task6.html:127 90 days left until Christmas!
+task6.html:149 true
+task6.html:155 abeemrstw
+task6.html:168 The Quick Brown Fox
+task6.html:192 2,4*/
+    </script>
+</body>
+</html>
